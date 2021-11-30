@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,19 @@ Route::get('/', function () {
 Route::get('/officeAssistant', function () {
     return view('/officeAssistant.dashboard');
 });
+Route::get('/doctor', function () {
+    return view('doctor');
+})->name('doctor');
+
+Route::get('/addPrescription', function () {
+    return view('addPrescription');
+})->name('addPrescription');
+
+Route::get('/PatientList', function () {
+    return view('PatientList');
+})->name('PatientList');
+
+Route::get('/PatientRecord', function () {
+    return view('PatientRecord');
+})->name('PatientRecord');
+
