@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/officeAssistant', function () {
-    return view('/officeAssistant.dashboard');
-});
+//Route::get('/officeAssistant', function () {
+ //   return view('/officeAssistant.dashboard');
+//});
 Route::get('/doctor', function () {
     return view('doctor');
 })->name('doctor');
@@ -41,3 +41,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/', function () {
+    return view('user');
+})->name('user');
